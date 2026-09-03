@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Mrs+Saint+Delafield&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --cream: #FEF8F0;
+  --blue: #8CA7F4;
+  --lavender: #E7BEF8;
+  --olive: #EDE986;
+  --yellow: #FFFF84;
+  --gray: #AFAFAF;
+  --ink: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Custom cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+    html,
+    body,
+    body * {
+      cursor: none !important;
+    }
+  }
+
+.site-wrap {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  padding: 10px 0 60px;
+  overflow-x: hidden;
+}
+
+.sky-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/sky.jpg");
+  z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    /* background-attachment: fixed; */
+}
+
+.page-frame {
+  width: 92vw;
+  max-width: none;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  font-family: 'Mrs Saint Delafield', cursive;
+  text-align: center;
+  font-size: 72px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   FOLDER NAVIGATION
+   ========================= */
+
+.folder-nav {
+  display: flex;
+  gap: 4px;
+  padding-left: 8px;
+}
+
+
+ .folder-tab {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    border: none;
+    cursor: pointer;
+    padding: 18px 42px 24px;
+    border-radius: 30px 30px 0 0;
+    background: var(--tab-color);
+    color: var(--tab-text);
+    transform: translateY(10px);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+.folder-tab:hover {
+  transform: translateY(4px);
+}
+
+.folder-tab.active {
+  transform: translateY(0);
+  z-index: 3;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.06);
+} 
+
+
+
+/* =========================
+   MAIN PANEL
+   ========================= */
+
+.panel {
+  background: var(--panel-color);
+  border-radius: 0 45px 45px 45px;
+  min-height: 760px;
+  padding: 90px 100px 100px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(20, 20, 40, 0.18);
+  transition: background 0.25s ease;
+}
+
+
+/* =========================
+   SHARED BUTTON
+   ========================= */
+
+.pill-btn {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  background: var(--yellow);
+  color: var(--ink);
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border-radius: 999px;
+  padding: 18px 70px;
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.pill-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SOCIAL ICONS
+   ========================= */
+
+.social-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-row a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 640px) {
+  .site-wrap {
+    padding: 20px 12px 40px;
+  }
+
+  .page-frame {
+    width: 100%;
+    max-width: none;
+  }
+
+  .panel {
+    min-height: 0;
+    padding: 32px 22px 40px;
+    border-radius: 0 24px 24px 24px;
+  }
+
+  .logo {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .folder-nav {
+    gap: 3px;
+    padding-left: 4px;
+  }
+
+  /* .folder-tab {
+    padding: 10px 14px 16px;
+    font-size: 12px;
+    border-radius: 16px 16px 0 0;
+  } */
+  .folder-tab {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    border: none;
+    cursor: pointer;
+  
+    padding: 18px 46px 24px;
+    min-width: 165px;
+  
+    background: var(--tab-color);
+    color: var(--tab-text);
+  
+    /* ACTUAL FOLDER TAB SHAPE */
+    clip-path: polygon(
+      16% 0%,
+      84% 0%,
+      100% 100%,
+      0% 100%
+    );
+  
+    border-radius: 0;
+  
+    transform: translateY(10px);
+    transition: transform 0.18s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .folder-tab:hover {
+    transform: translateY(4px);
+  }
+  
+  .folder-tab.active {
+    transform: translateY(0);
+    z-index: 3;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.06);
+  }
+
+  .pill-btn {
+    font-size: 15px;
+    padding: 14px 30px;
+  }
+
+  .social-row a {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 641px) {
+  .panel {
+    padding: 0 70px 80px;
+  }
+
+  .pill-btn {
+    font-size: 28px;
+    padding: 20px 85px;
+  }
+}
+

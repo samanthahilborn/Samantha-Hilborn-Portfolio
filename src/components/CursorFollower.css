@@ -1,0 +1,61 @@
+/* ===================================
+   CUSTOM CURSOR
+   =================================== */
+
+
+/* Small dot = exact mouse position */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 25px;
+    height: 25px;
+  
+    background: #ff8a3d;
+    border-radius: 50%;
+  
+    pointer-events: none;
+    z-index: 10001;
+  
+    opacity: 0;
+  
+    transition: opacity 0.15s ease;
+  
+    will-change: transform;
+  }
+  
+  
+  /* Large circle = trailing cursor */
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 52px;
+    height: 52px;
+  
+    border: 3px dotted #ff8a3d;
+    border-radius: 50%;
+  
+    pointer-events: none;
+    z-index: 10000;
+  
+    opacity: 0;
+  
+    transition:
+      opacity 0.15s ease,
+      width 0.2s ease,
+      height 0.2s ease;
+  
+    will-change: transform;
+  }
+  
+  
+  /* Don't use custom cursor on touch screens */
+  @media (hover: none), (pointer: coarse) {
+    .cursor-dot,
+    .cursor-ring {
+      display: none;
+    }
+  }

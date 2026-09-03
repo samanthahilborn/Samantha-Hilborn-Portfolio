@@ -1,0 +1,993 @@
+/* /* =========================
+   HOME PAGE
+   ========================= 
+
+   .home-page h1,
+   .home-page h2 {
+     color: #fff;
+     text-align: center;
+     font-size: 52px;
+     margin: 0 0 38px;
+   }
+   
+   
+   /* =========================
+      HERO
+      ========================= 
+   
+   .hero {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 80px;
+     flex-wrap: nowrap;
+   }
+   
+   .hero-photo-wrap {
+     flex: 0 0 340px;
+   }
+   
+   .hero-photo {
+     width: 100%;
+     border-radius: 20px;
+     display: block;
+     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+   }
+   
+   .hero-copy {
+     flex: 0 1 650px;
+   }
+   
+   .hero-copy h1 {
+     font-size: 70px;
+     line-height: 1.02;
+     margin: 0 0 24px;
+   }
+   
+   .hero-copy .hi {
+     font-size: 110px;
+   }
+   
+   .hero-sub {
+     font-size: 21px;
+     line-height: 1.35;
+     max-width: 650px;
+     margin: 0 0 40px;
+     opacity: 0.85;
+   }
+   
+   
+   /* =========================
+      ABOUT ME
+      ========================= 
+   
+   .about-box {
+     background: var(--gray);
+     color: #fff;
+     border-radius: 24px;
+     margin-top: 80px;
+     padding: 60px;
+     display: flex;
+     gap: 70px;
+     align-items: center;
+     flex-wrap: wrap;
+   }
+   
+   .about-copy {
+     flex: 1 1 320px;
+   }
+   
+   .about-copy h2 {
+     font-size: 42px;
+     margin: 0 0 18px;
+   }
+   
+   .about-copy p {
+     font-size: 18px;
+     line-height: 1.7;
+     margin: 0 0 16px;
+     opacity: 0.95;
+   }
+   
+   .polaroid {
+     background: #fff;
+     padding: 12px 12px 32px;
+     border-radius: 4px;
+     width: 260px;
+     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+     position: relative;
+     transform: rotate(2deg);
+     flex: 0 0 auto;
+   }
+   
+   .polaroid img {
+     width: 100%;
+     border-radius: 2px;
+     display: block;
+   }
+   
+   .tape {
+     position: absolute;
+     top: -14px;
+     left: 50%;
+     transform: translateX(-50%) rotate(-3deg);
+     width: 70px;
+     height: 22px;
+     background: rgba(190, 160, 110, 0.55);
+     border: 1px solid rgba(150, 120, 80, 0.3);
+   }
+   
+   
+   /* =========================
+      SKILLS
+      ========================= 
+   
+   .skills-section {
+     margin-top: 80px;
+     text-align: center;
+   }
+   
+   .skills-section h2 {
+     font-size: 42px;
+     margin: 0 0 30px;
+   }
+   
+   .skills-grid {
+     display: grid;
+     grid-template-columns: repeat(3, minmax(160px, 1fr));
+     gap: 18px;
+     max-width: 700px;
+     margin: 0 auto;
+   }
+   
+   .skill-pill {
+     font-size: 18px;
+     padding: 14px 20px;
+     text-align: center;
+   }
+   
+   
+   /* =========================
+      THANK YOU
+      ========================= 
+   
+   .thanks-box {
+     background: var(--gray);
+     color: #fff;
+     border-radius: 24px;
+     margin-top: 80px;
+     padding: 60px;
+     text-align: center;
+   }
+   
+   .thanks-box h2 {
+     font-size: 38px;
+     margin: 0 0 8px;
+   }
+   
+   .thanks-box p {
+     font-size: 18px;
+     margin: 0 0 26px;
+     opacity: 0.9;
+   }
+   
+   
+   /* =========================
+      MOBILE
+      ========================= 
+   
+   @media (max-width: 640px) {
+     .hero {
+       flex-direction: column;
+       flex-wrap: wrap;
+       gap: 28px;
+       text-align: center;
+     }
+   
+     .hero-photo-wrap {
+       flex: 0 0 220px;
+       width: 220px;
+     }
+   
+     .hero-copy {
+       flex: 1 1 auto;
+     }
+   
+     .hero-copy .hi {
+       font-size: 40px;
+     }
+   
+     .hero-copy h1 {
+       font-size: 32px;
+     }
+   
+     .hero-sub {
+       font-size: 15px;
+       max-width: 100%;
+     }
+   
+     .about-box {
+       margin-top: 44px;
+       padding: 32px 24px;
+       flex-direction: column;
+       gap: 28px;
+       text-align: center;
+     }
+   
+     .about-copy h2,
+     .skills-section h2 {
+       font-size: 30px;
+     }
+   
+     .about-copy p {
+       font-size: 14px;
+     }
+   
+     .polaroid {
+       width: 190px;
+       margin: 0 auto;
+     }
+   
+     .skills-section {
+       margin-top: 48px;
+     }
+   
+     .skills-grid {
+       grid-template-columns: repeat(3, minmax(80px, 1fr));
+       max-width: 100%;
+       gap: 10px;
+     }
+   
+     .skill-pill {
+       font-size: 12px;
+       padding: 10px 6px;
+     }
+   
+     .thanks-box {
+       margin-top: 48px;
+       padding: 34px 22px;
+     }
+   
+     .thanks-box h2 {
+       font-size: 28px;
+     }
+   
+     .thanks-box p {
+       font-size: 14px;
+     }
+   }
+   
+   
+   /* =========================
+      LARGE DESKTOP HOME
+      ========================= 
+   
+   @media (min-width: 641px) {
+   
+     /* HERO 
+   
+     .hero {
+       min-height: 88vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 100px;
+       flex-wrap: nowrap;
+       padding: 70px 60px 90px;
+     }
+   
+     .hero-photo-wrap {
+       flex: 0 0 430px;
+     }
+   
+     .hero-photo {
+       width: 430px;
+       max-width: none;
+     }
+   
+     .hero-copy {
+       flex: 0 1 720px;
+     }
+   
+     .hero-copy h1 {
+       font-size: 88px;
+       line-height: 0.98;
+       margin-bottom: 30px;
+     }
+   
+     .hero-copy .hi {
+       font-size: 135px;
+     }
+   
+     .hero-sub {
+       font-size: 24px;
+       line-height: 1.4;
+       max-width: 700px;
+       margin-bottom: 45px;
+     }
+   
+   
+     /* ABOUT ME 
+   
+     .about-box {
+       min-height: 82vh;
+       margin-top: 0;
+       margin-bottom: 0;
+       padding: 90px 100px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 100px;
+       border-radius: 40px;
+     }
+   
+     .about-copy {
+       flex: 1 1 650px;
+     }
+   
+     .about-copy h2 {
+       font-size: 68px;
+       line-height: 1;
+       margin-bottom: 40px;
+     }
+   
+     .about-copy p {
+       font-size: 23px;
+       line-height: 1.55;
+       max-width: 720px;
+       margin-bottom: 28px;
+     }
+   
+     .polaroid {
+       width: 340px;
+     } */
+   
+   
+     /* SKILLS 
+   
+     .skills-section {
+       min-height: 75vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-top: 0;
+       padding: 100px 40px;
+     }
+   
+     .skills-section h2 {
+       font-size: 72px;
+       line-height: 1;
+       margin-bottom: 60px;
+     }
+   
+     .skills-grid {
+       width: 100%;
+       max-width: 900px;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 26px 35px;
+     }
+   
+     .skill-pill {
+       font-size: 23px;
+       padding: 20px 25px;
+       border-radius: 999px;
+     } */
+   
+   
+     /* THANK YOU 
+   
+     .thanks-box {
+       min-height: 68vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       margin-top: 0;
+       padding: 90px 60px;
+       border-radius: 40px;
+     }
+   
+     .thanks-box h2 {
+       font-size: 64px;
+       line-height: 1.1;
+       margin-bottom: 18px;
+     }
+   
+     .thanks-box p {
+       font-size: 30px;
+       margin-bottom: 35px;
+     }
+   
+     .thanks-box .pill-btn {
+       font-size: 26px;
+       padding: 17px 75px;
+     }
+   
+     .thanks-box .social-row {
+       margin-top: 35px;
+     }
+   
+     .thanks-box .social-row a {
+       width: 58px;
+       height: 58px;
+       font-size: 25px;
+     }
+   } */
+
+/* ==================================================
+   HOME PAGE — STACKING PAPER EFFECT
+   ================================================== */
+
+   .home-page {
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  /* ==================================================
+     ALL PAPER SHEETS
+     ================================================== */
+  
+  .paper-sheet {
+    position: sticky;
+  
+    /*
+      Leaves enough space for the navigation
+      while it is stuck at the top.
+    */
+    top: var(--sticky-nav-height);
+  
+    width: 100%;
+  
+    min-height: calc(
+      100vh - var(--sticky-nav-height) - 14px
+    );
+  
+    box-sizing: border-box;
+  
+    /*
+      Mostly rectangular — just enough rounding
+      so it still fits your website aesthetic.
+    */
+    border-radius: 6px 6px 0 0;
+  
+    /*
+      Makes each new sheet visibly sit on top
+      of the previous sheet.
+    */
+    box-shadow:
+      0 -12px 30px rgba(32, 35, 60, 0.09),
+      0 -3px 8px rgba(32, 35, 60, 0.05);
+  
+    border-top:
+      1px solid rgba(255, 255, 255, 0.35);
+  }
+  
+  
+  /*
+    Each paper gets a higher layer.
+  */
+  
+  .paper-hero {
+    z-index: 1;
+  }
+  
+  .paper-about {
+    z-index: 2;
+  }
+  
+  .paper-skills {
+    z-index: 3;
+  }
+  
+  .paper-thanks {
+    z-index: 4;
+  }
+  
+  
+  /* ==================================================
+     PAPER 1 — HERO
+     ================================================== */
+  
+  .hero {
+    min-height: calc(
+      100vh - var(--sticky-nav-height) - 14px
+    );
+  
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+  
+    gap: 100px;
+  
+    padding: 70px 60px 90px;
+  
+    background: var(--cream);
+  
+    border-radius: 0 36px 6px 6px;
+  }
+  
+  
+  .hero-photo-wrap {
+    flex: 0 0 430px;
+  }
+  
+  
+  .hero-photo {
+    width: 430px;
+    max-width: none;
+  
+    display: block;
+  
+    border-radius: 20px;
+  
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  
+  .hero-copy {
+    flex: 0 1 720px;
+  }
+  
+  
+  .hero-copy h1 {
+    color: #fff;
+  
+    text-align: center;
+  
+    font-size: 88px;
+  
+    line-height: 0.98;
+  
+    margin: 0 0 30px;
+  }
+  
+  
+  .hero-copy .hi {
+    font-size: 135px;
+  }
+  
+  
+  .hero-sub {
+    font-size: 24px;
+  
+    line-height: 1.4;
+  
+    max-width: 700px;
+  
+    margin: 0 0 45px;
+  
+    opacity: 0.85;
+  }
+  
+  
+  /* ==================================================
+     PAPER 2 — ABOUT ME
+     ================================================== */
+  
+  .about-box {
+    background: var(--gray);
+  
+    color: #fff;
+  
+    min-height: calc(
+      100vh - var(--sticky-nav-height) - 14px
+    );
+  
+    padding: 90px 100px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    gap: 100px;
+  
+    /*
+      Makes this paper very slightly narrower
+      so you can see the previous paper underneath.
+    */
+    width: calc(100% - 36px);
+  
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  
+  
+  .about-copy {
+    flex: 1 1 650px;
+  }
+  
+  
+  .about-copy h2 {
+    color: #fff;
+  
+    text-align: center;
+  
+    font-size: 68px;
+  
+    line-height: 1;
+  
+    margin: 0 0 40px;
+  }
+  
+  
+  .about-copy p {
+    font-size: 23px;
+  
+    line-height: 1.55;
+  
+    max-width: 720px;
+  
+    margin: 0 0 28px;
+  
+    opacity: 0.95;
+  }
+  
+  
+  /* ==================================================
+     POLAROID
+     ================================================== */
+  
+  .polaroid {
+    background: #fff;
+  
+    padding: 12px 12px 32px;
+  
+    border-radius: 3px;
+  
+    width: 340px;
+  
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.25);
+  
+    position: relative;
+  
+    transform: rotate(2deg);
+  
+    flex: 0 0 auto;
+  }
+  
+  
+  .polaroid img {
+    width: 100%;
+  
+    display: block;
+  
+    border-radius: 2px;
+  }
+  
+  
+  .tape {
+    position: absolute;
+  
+    top: -14px;
+  
+    left: 50%;
+  
+    transform:
+      translateX(-50%)
+      rotate(-3deg);
+  
+    width: 70px;
+  
+    height: 22px;
+  
+    background:
+      rgba(190, 160, 110, 0.55);
+  
+    border:
+      1px solid rgba(150, 120, 80, 0.3);
+  }
+  
+  
+  /* ==================================================
+     PAPER 3 — SKILLS
+     ================================================== */
+  
+  .skills-section {
+    background: var(--cream);
+  
+    min-height: calc(
+      100vh - var(--sticky-nav-height) - 14px
+    );
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    padding: 100px 60px;
+  
+    text-align: center;
+  
+    width: calc(100% - 18px);
+  
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+  
+  
+  .skills-section h2 {
+    color: var(--ink);
+  
+    font-size: 72px;
+  
+    line-height: 1;
+  
+    margin: 0 0 60px;
+  }
+  
+  
+  .skills-grid {
+    width: 100%;
+  
+    max-width: 900px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      repeat(3, 1fr);
+  
+    gap: 26px 35px;
+  }
+  
+  
+  .skill-pill {
+    font-size: 23px;
+  
+    padding: 20px 25px;
+  
+    border-radius: 999px;
+  
+    text-align: center;
+  }
+  
+  
+  /* ==================================================
+     PAPER 4 — THANK YOU
+     ================================================== */
+  
+  .thanks-box {
+    background: var(--gray);
+  
+    color: #fff;
+  
+    min-height: calc(
+      100vh - var(--sticky-nav-height) - 14px
+    );
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    text-align: center;
+  
+    padding: 90px 60px;
+  
+    /*
+      Slightly different width creates that imperfect
+      physical-paper stacking effect.
+    */
+    width: calc(100% - 28px);
+  
+    margin-left: 14px;
+    margin-right: 14px;
+  
+    border-radius: 6px 6px 30px 30px;
+  }
+  
+  
+  .thanks-box h2 {
+    color: #fff;
+  
+    font-size: 64px;
+  
+    line-height: 1.1;
+  
+    margin: 0 0 18px;
+  }
+  
+  
+  .thanks-box p {
+    font-size: 30px;
+  
+    margin: 0 0 35px;
+  }
+  
+  
+  .thanks-box .pill-btn {
+    font-size: 26px;
+  
+    padding: 17px 75px;
+  }
+  
+  
+  .thanks-box .social-row {
+    margin-top: 35px;
+  }
+  
+  
+  .thanks-box .social-row a {
+    width: 58px;
+  
+    height: 58px;
+  
+    font-size: 25px;
+  }
+  
+  
+  /* ==================================================
+     MOBILE
+     ================================================== */
+  
+  @media (max-width: 640px) {
+  
+    /*
+      Disable the paper stacking on small/touch screens.
+      Normal scrolling is much nicer there.
+    */
+  
+    .paper-sheet {
+      position: relative;
+  
+      top: auto;
+  
+      min-height: auto;
+  
+      width: 100%;
+  
+      margin-left: 0;
+      margin-right: 0;
+  
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+  
+      border-radius: 20px;
+  
+      margin-bottom: 24px;
+    }
+  
+  
+    /* HERO */
+  
+    .hero {
+      min-height: auto;
+  
+      flex-direction: column;
+  
+      gap: 28px;
+  
+      padding: 45px 24px;
+  
+      text-align: center;
+    }
+  
+  
+    .hero-photo-wrap {
+      flex: 0 0 auto;
+  
+      width: 220px;
+    }
+  
+  
+    .hero-photo {
+      width: 220px;
+    }
+  
+  
+    .hero-copy {
+      flex: 1 1 auto;
+    }
+  
+  
+    .hero-copy .hi {
+      font-size: 40px;
+    }
+  
+  
+    .hero-copy h1 {
+      font-size: 32px;
+    }
+  
+  
+    .hero-sub {
+      font-size: 15px;
+  
+      max-width: 100%;
+    }
+  
+  
+    /* ABOUT */
+  
+    .about-box {
+      min-height: auto;
+  
+      padding: 42px 24px;
+  
+      flex-direction: column;
+  
+      gap: 28px;
+  
+      text-align: center;
+    }
+  
+  
+    .about-copy h2 {
+      font-size: 30px;
+    }
+  
+  
+    .about-copy p {
+      font-size: 14px;
+    }
+  
+  
+    .polaroid {
+      width: 190px;
+  
+      margin: 0 auto;
+    }
+  
+  
+    /* SKILLS */
+  
+    .skills-section {
+      min-height: auto;
+  
+      padding: 50px 22px;
+    }
+  
+  
+    .skills-section h2 {
+      font-size: 30px;
+  
+      margin-bottom: 30px;
+    }
+  
+  
+    .skills-grid {
+      grid-template-columns:
+        repeat(3, minmax(80px, 1fr));
+  
+      max-width: 100%;
+  
+      gap: 10px;
+    }
+  
+  
+    .skill-pill {
+      font-size: 12px;
+  
+      padding: 10px 6px;
+    }
+  
+  
+    /* THANK YOU */
+  
+    .thanks-box {
+      min-height: auto;
+  
+      padding: 50px 22px;
+    }
+  
+  
+    .thanks-box h2 {
+      font-size: 28px;
+    }
+  
+  
+    .thanks-box p {
+      font-size: 14px;
+    }
+  }
