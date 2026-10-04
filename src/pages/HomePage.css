@@ -1,829 +1,1916 @@
-/* /* =========================
-   HOME PAGE
-   ========================= 
-
-   .home-page h1,
-   .home-page h2 {
-     color: #fff;
-     text-align: center;
-     font-size: 52px;
-     margin: 0 0 38px;
-   }
-   
-   
-   /* =========================
-      HERO
-      ========================= 
-   
-   .hero {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 80px;
-     flex-wrap: nowrap;
-   }
-   
-   .hero-photo-wrap {
-     flex: 0 0 340px;
-   }
-   
-   .hero-photo {
-     width: 100%;
-     border-radius: 20px;
-     display: block;
-     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-   }
-   
-   .hero-copy {
-     flex: 0 1 650px;
-   }
-   
-   .hero-copy h1 {
-     font-size: 70px;
-     line-height: 1.02;
-     margin: 0 0 24px;
-   }
-   
-   .hero-copy .hi {
-     font-size: 110px;
-   }
-   
-   .hero-sub {
-     font-size: 21px;
-     line-height: 1.35;
-     max-width: 650px;
-     margin: 0 0 40px;
-     opacity: 0.85;
-   }
-   
-   
-   /* =========================
-      ABOUT ME
-      ========================= 
-   
-   .about-box {
-     background: var(--gray);
-     color: #fff;
-     border-radius: 24px;
-     margin-top: 80px;
-     padding: 60px;
-     display: flex;
-     gap: 70px;
-     align-items: center;
-     flex-wrap: wrap;
-   }
-   
-   .about-copy {
-     flex: 1 1 320px;
-   }
-   
-   .about-copy h2 {
-     font-size: 42px;
-     margin: 0 0 18px;
-   }
-   
-   .about-copy p {
-     font-size: 18px;
-     line-height: 1.7;
-     margin: 0 0 16px;
-     opacity: 0.95;
-   }
-   
-   .polaroid {
-     background: #fff;
-     padding: 12px 12px 32px;
-     border-radius: 4px;
-     width: 260px;
-     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-     position: relative;
-     transform: rotate(2deg);
-     flex: 0 0 auto;
-   }
-   
-   .polaroid img {
-     width: 100%;
-     border-radius: 2px;
-     display: block;
-   }
-   
-   .tape {
-     position: absolute;
-     top: -14px;
-     left: 50%;
-     transform: translateX(-50%) rotate(-3deg);
-     width: 70px;
-     height: 22px;
-     background: rgba(190, 160, 110, 0.55);
-     border: 1px solid rgba(150, 120, 80, 0.3);
-   }
-   
-   
-   /* =========================
-      SKILLS
-      ========================= 
-   
-   .skills-section {
-     margin-top: 80px;
-     text-align: center;
-   }
-   
-   .skills-section h2 {
-     font-size: 42px;
-     margin: 0 0 30px;
-   }
-   
-   .skills-grid {
-     display: grid;
-     grid-template-columns: repeat(3, minmax(160px, 1fr));
-     gap: 18px;
-     max-width: 700px;
-     margin: 0 auto;
-   }
-   
-   .skill-pill {
-     font-size: 18px;
-     padding: 14px 20px;
-     text-align: center;
-   }
-   
-   
-   /* =========================
-      THANK YOU
-      ========================= 
-   
-   .thanks-box {
-     background: var(--gray);
-     color: #fff;
-     border-radius: 24px;
-     margin-top: 80px;
-     padding: 60px;
-     text-align: center;
-   }
-   
-   .thanks-box h2 {
-     font-size: 38px;
-     margin: 0 0 8px;
-   }
-   
-   .thanks-box p {
-     font-size: 18px;
-     margin: 0 0 26px;
-     opacity: 0.9;
-   }
-   
-   
-   /* =========================
-      MOBILE
-      ========================= 
-   
-   @media (max-width: 640px) {
-     .hero {
-       flex-direction: column;
-       flex-wrap: wrap;
-       gap: 28px;
-       text-align: center;
-     }
-   
-     .hero-photo-wrap {
-       flex: 0 0 220px;
-       width: 220px;
-     }
-   
-     .hero-copy {
-       flex: 1 1 auto;
-     }
-   
-     .hero-copy .hi {
-       font-size: 40px;
-     }
-   
-     .hero-copy h1 {
-       font-size: 32px;
-     }
-   
-     .hero-sub {
-       font-size: 15px;
-       max-width: 100%;
-     }
-   
-     .about-box {
-       margin-top: 44px;
-       padding: 32px 24px;
-       flex-direction: column;
-       gap: 28px;
-       text-align: center;
-     }
-   
-     .about-copy h2,
-     .skills-section h2 {
-       font-size: 30px;
-     }
-   
-     .about-copy p {
-       font-size: 14px;
-     }
-   
-     .polaroid {
-       width: 190px;
-       margin: 0 auto;
-     }
-   
-     .skills-section {
-       margin-top: 48px;
-     }
-   
-     .skills-grid {
-       grid-template-columns: repeat(3, minmax(80px, 1fr));
-       max-width: 100%;
-       gap: 10px;
-     }
-   
-     .skill-pill {
-       font-size: 12px;
-       padding: 10px 6px;
-     }
-   
-     .thanks-box {
-       margin-top: 48px;
-       padding: 34px 22px;
-     }
-   
-     .thanks-box h2 {
-       font-size: 28px;
-     }
-   
-     .thanks-box p {
-       font-size: 14px;
-     }
-   }
-   
-   
-   /* =========================
-      LARGE DESKTOP HOME
-      ========================= 
-   
-   @media (min-width: 641px) {
-   
-     /* HERO 
-   
-     .hero {
-       min-height: 88vh;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       gap: 100px;
-       flex-wrap: nowrap;
-       padding: 70px 60px 90px;
-     }
-   
-     .hero-photo-wrap {
-       flex: 0 0 430px;
-     }
-   
-     .hero-photo {
-       width: 430px;
-       max-width: none;
-     }
-   
-     .hero-copy {
-       flex: 0 1 720px;
-     }
-   
-     .hero-copy h1 {
-       font-size: 88px;
-       line-height: 0.98;
-       margin-bottom: 30px;
-     }
-   
-     .hero-copy .hi {
-       font-size: 135px;
-     }
-   
-     .hero-sub {
-       font-size: 24px;
-       line-height: 1.4;
-       max-width: 700px;
-       margin-bottom: 45px;
-     }
-   
-   
-     /* ABOUT ME 
-   
-     .about-box {
-       min-height: 82vh;
-       margin-top: 0;
-       margin-bottom: 0;
-       padding: 90px 100px;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       gap: 100px;
-       border-radius: 40px;
-     }
-   
-     .about-copy {
-       flex: 1 1 650px;
-     }
-   
-     .about-copy h2 {
-       font-size: 68px;
-       line-height: 1;
-       margin-bottom: 40px;
-     }
-   
-     .about-copy p {
-       font-size: 23px;
-       line-height: 1.55;
-       max-width: 720px;
-       margin-bottom: 28px;
-     }
-   
-     .polaroid {
-       width: 340px;
-     } */
-   
-   
-     /* SKILLS 
-   
-     .skills-section {
-       min-height: 75vh;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       margin-top: 0;
-       padding: 100px 40px;
-     }
-   
-     .skills-section h2 {
-       font-size: 72px;
-       line-height: 1;
-       margin-bottom: 60px;
-     }
-   
-     .skills-grid {
-       width: 100%;
-       max-width: 900px;
-       grid-template-columns: repeat(3, 1fr);
-       gap: 26px 35px;
-     }
-   
-     .skill-pill {
-       font-size: 23px;
-       padding: 20px 25px;
-       border-radius: 999px;
-     } */
-   
-   
-     /* THANK YOU 
-   
-     .thanks-box {
-       min-height: 68vh;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-       margin-top: 0;
-       padding: 90px 60px;
-       border-radius: 40px;
-     }
-   
-     .thanks-box h2 {
-       font-size: 64px;
-       line-height: 1.1;
-       margin-bottom: 18px;
-     }
-   
-     .thanks-box p {
-       font-size: 30px;
-       margin-bottom: 35px;
-     }
-   
-     .thanks-box .pill-btn {
-       font-size: 26px;
-       padding: 17px 75px;
-     }
-   
-     .thanks-box .social-row {
-       margin-top: 35px;
-     }
-   
-     .thanks-box .social-row a {
-       width: 58px;
-       height: 58px;
-       font-size: 25px;
-     }
-   } */
-
 /* ==================================================
-   HOME PAGE — STACKING PAPER EFFECT
+   HOME PAGE
+
+   The entire cream folder stays one fixed size.
+
+   Hero / About / Skills / Thank You each take up
+   one full folder screen and scroll INSIDE it.
    ================================================== */
 
-   .home-page {
+
+ /* ==================================================
+   HOME FOLDER SIZE
+   Match Experience / Projects folder height
+   ================================================== */
+
+   .panel.panel-home {
+  
+    height: max(920px, calc(75vh + 80px));
+    min-height: max(920px, calc(75vh + 80px));
+  
+    padding: 0;
+  
+    overflow: hidden;
+  }
+  
+  /* ==================================================
+     HOME ROOT
+     ================================================== */
+  
+  .home-page {
     position: relative;
+  
     width: 100%;
+    height: 100%;
+  
+    overflow: hidden;
+  
+    border-radius:
+      0
+      45px
+      45px
+      45px;
+  
+    color: var(--ink);
   }
   
   
   /* ==================================================
-     ALL PAPER SHEETS
+     INTERNAL FOLDER SCROLLER
      ================================================== */
   
-  .paper-sheet {
-    position: sticky;
-  
-    /*
-      Leaves enough space for the navigation
-      while it is stuck at the top.
-    */
-    top: var(--sticky-nav-height);
-  
+  .home-scroll {
     width: 100%;
+    height: 100%;
   
-    min-height: calc(
-      100vh - var(--sticky-nav-height) - 14px
-    );
+    overflow-y: auto;
+    overflow-x: hidden;
   
-    box-sizing: border-box;
+    scroll-snap-type:
+      y mandatory;
   
-    /*
-      Mostly rectangular — just enough rounding
-      so it still fits your website aesthetic.
-    */
-    border-radius: 6px 6px 0 0;
+    scroll-behavior: smooth;
   
-    /*
-      Makes each new sheet visibly sit on top
-      of the previous sheet.
-    */
-    box-shadow:
-      0 -12px 30px rgba(32, 35, 60, 0.09),
-      0 -3px 8px rgba(32, 35, 60, 0.05);
+    overscroll-behavior: contain;
   
-    border-top:
-      1px solid rgba(255, 255, 255, 0.35);
+    scrollbar-width: none;
   }
   
   
-  /*
-    Each paper gets a higher layer.
-  */
-  
-  .paper-hero {
-    z-index: 1;
-  }
-  
-  .paper-about {
-    z-index: 2;
-  }
-  
-  .paper-skills {
-    z-index: 3;
-  }
-  
-  .paper-thanks {
-    z-index: 4;
+  .home-scroll::-webkit-scrollbar {
+    display: none;
   }
   
   
   /* ==================================================
-     PAPER 1 — HERO
+     EACH FULL FOLDER SECTION
      ================================================== */
   
-  .hero {
-    min-height: calc(
-      100vh - var(--sticky-nav-height) - 14px
-    );
+  .home-slide {
+    position: relative;
+  
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  
+    overflow: hidden;
   
     display: flex;
   
     align-items: center;
     justify-content: center;
   
-    gap: 100px;
-  
-    padding: 70px 60px 90px;
+    padding:
+      54px
+      82px
+      52px;
   
     background: var(--cream);
   
-    border-radius: 0 36px 6px 6px;
-  }
-  
-  
-  .hero-photo-wrap {
-    flex: 0 0 430px;
-  }
-  
-  
-  .hero-photo {
-    width: 430px;
-    max-width: none;
-  
-    display: block;
-  
-    border-radius: 20px;
-  
-    box-shadow:
-      0 12px 30px rgba(0, 0, 0, 0.12);
-  }
-  
-  
-  .hero-copy {
-    flex: 0 1 720px;
-  }
-  
-  
-  .hero-copy h1 {
-    color: #fff;
-  
-    text-align: center;
-  
-    font-size: 88px;
-  
-    line-height: 0.98;
-  
-    margin: 0 0 30px;
-  }
-  
-  
-  .hero-copy .hi {
-    font-size: 135px;
-  }
-  
-  
-  .hero-sub {
-    font-size: 24px;
-  
-    line-height: 1.4;
-  
-    max-width: 700px;
-  
-    margin: 0 0 45px;
-  
-    opacity: 0.85;
+    isolation: isolate;
   }
   
   
   /* ==================================================
-     PAPER 2 — ABOUT ME
+     SECTION NUMBER
      ================================================== */
   
-  .about-box {
-    background: var(--gray);
+  .home-slide-number {
+    position: absolute;
   
-    color: #fff;
+    top: 28px;
+    left: 34px;
   
-    min-height: calc(
-      100vh - var(--sticky-nav-height) - 14px
-    );
+    z-index: 10;
   
-    padding: 90px 100px;
+    font-size: 9px;
+    font-weight: 600;
+  
+    letter-spacing: 0.16em;
+  
+    color:
+      rgba(43, 43, 43, 0.38);
+  }
+  
+  
+  /* ==================================================
+     SHARED TEXT
+     ================================================== */
+  
+  .home-kicker {
+    margin: 0 0 10px;
+  
+    font-size: 10px;
+    font-weight: 600;
+  
+    letter-spacing: 0.16em;
+  
+    color:
+      rgba(43, 43, 43, 0.48);
+  }
+  
+  
+  /* ==================================================
+     SHARED PRIMARY BUTTON
+     ================================================== */
+  
+  .home-primary-btn {
+    min-height: 50px;
+  
+    display: inline-flex;
+  
+    align-items: center;
+    justify-content: center;
+  
+    gap: 26px;
+  
+    border:
+      1.5px solid
+      rgba(43, 43, 43, 0.72);
+  
+    border-radius: 999px;
+  
+    padding:
+      0
+      24px;
+  
+    background: var(--yellow);
+  
+    font-family:
+      "Poppins",
+      sans-serif;
+  
+    font-size: 12px;
+    font-weight: 600;
+  
+    color: var(--ink);
+  
+    cursor: pointer;
+  
+    transition:
+      transform
+        200ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        ),
+      box-shadow
+        200ms ease;
+  }
+  
+  
+  .home-primary-btn:hover {
+    transform:
+      translateY(-3px);
+  
+    box-shadow:
+      0 9px 20px
+      rgba(50, 44, 25, 0.12);
+  }
+  
+  
+  .home-primary-btn span {
+    font-size: 16px;
+  }
+  
+  
+  /* ==================================================
+     SHARED TEXT BUTTON
+     ================================================== */
+  
+  .home-text-btn {
+    display: inline-flex;
+  
+    align-items: center;
+  
+    gap: 9px;
+  
+    border: none;
+  
+    padding: 10px 3px;
+  
+    background: transparent;
+  
+    font-family:
+      "Poppins",
+      sans-serif;
+  
+    font-size: 10px;
+    font-weight: 600;
+  
+    color:
+      rgba(43, 43, 43, 0.64);
+  
+    cursor: pointer;
+  
+    transition:
+      gap 180ms ease,
+      color 180ms ease;
+  }
+  
+  
+  .home-text-btn:hover {
+    gap: 14px;
+  
+    color: var(--ink);
+  }
+  
+  
+  /* ==================================================
+     NEXT / SCROLL BUTTON
+     ================================================== */
+  
+  .home-next-section {
+    position: absolute;
+  
+    left: 50%;
+    bottom: 25px;
+  
+    z-index: 20;
   
     display: flex;
   
     align-items: center;
   
-    justify-content: space-between;
+    gap: 8px;
   
-    gap: 100px;
+    border: none;
   
-    /*
-      Makes this paper very slightly narrower
-      so you can see the previous paper underneath.
-    */
-    width: calc(100% - 36px);
+    background: transparent;
   
-    margin-left: 18px;
-    margin-right: 18px;
+    transform:
+      translateX(-50%);
+  
+    font-family:
+      "Poppins",
+      sans-serif;
+  
+    font-size: 8px;
+    font-weight: 600;
+  
+    letter-spacing: 0.14em;
+  
+    color:
+      rgba(43, 43, 43, 0.37);
+  
+    cursor: pointer;
+  
+    transition:
+      color 180ms ease,
+      transform 180ms ease;
   }
   
   
-  .about-copy {
-    flex: 1 1 650px;
-  }
-  
-  
-  .about-copy h2 {
-    color: #fff;
-  
-    text-align: center;
-  
-    font-size: 68px;
-  
-    line-height: 1;
-  
-    margin: 0 0 40px;
-  }
-  
-  
-  .about-copy p {
-    font-size: 23px;
-  
-    line-height: 1.55;
-  
-    max-width: 720px;
-  
-    margin: 0 0 28px;
-  
-    opacity: 0.95;
-  }
-  
-  
-  /* ==================================================
-     POLAROID
-     ================================================== */
-  
-  .polaroid {
-    background: #fff;
-  
-    padding: 12px 12px 32px;
-  
-    border-radius: 3px;
-  
-    width: 340px;
-  
-    box-shadow:
-      0 10px 24px rgba(0, 0, 0, 0.25);
-  
-    position: relative;
-  
-    transform: rotate(2deg);
-  
-    flex: 0 0 auto;
-  }
-  
-  
-  .polaroid img {
-    width: 100%;
-  
-    display: block;
-  
-    border-radius: 2px;
-  }
-  
-  
-  .tape {
-    position: absolute;
-  
-    top: -14px;
-  
-    left: 50%;
+  .home-next-section:hover {
+    color:
+      rgba(43, 43, 43, 0.76);
   
     transform:
       translateX(-50%)
-      rotate(-3deg);
-  
-    width: 70px;
-  
-    height: 22px;
-  
-    background:
-      rgba(190, 160, 110, 0.55);
-  
-    border:
-      1px solid rgba(150, 120, 80, 0.3);
+      translateY(3px);
   }
   
   
   /* ==================================================
-     PAPER 3 — SKILLS
+     01 — HERO
      ================================================== */
   
-  .skills-section {
-    background: var(--cream);
+  .home-hero::before {
+    content: "";
   
-    min-height: calc(
-      100vh - var(--sticky-nav-height) - 14px
-    );
+    position: absolute;
   
-    display: flex;
+    width: 460px;
+    height: 460px;
   
-    flex-direction: column;
+    right: -140px;
+    top: -190px;
   
-    justify-content: center;
+    border-radius: 50%;
   
-    align-items: center;
+    background:
+      rgba(
+        231,
+        190,
+        248,
+        0.18
+      );
   
-    padding: 100px 60px;
-  
-    text-align: center;
-  
-    width: calc(100% - 18px);
-  
-    margin-left: 9px;
-    margin-right: 9px;
+    z-index: -1;
   }
   
   
-  .skills-section h2 {
-    color: var(--ink);
+  .home-hero::after {
+    content: "HELLO";
   
-    font-size: 72px;
+    position: absolute;
+  
+    right: 35px;
+    bottom: -50px;
+  
+    z-index: -1;
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        100px,
+        14vw,
+        205px
+      );
+  
+    font-weight: 800;
   
     line-height: 1;
   
-    margin: 0 0 60px;
+    letter-spacing: -0.07em;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.028
+      );
   }
   
   
-  .skills-grid {
-    width: 100%;
+  /* ==================================================
+     HERO LAYOUT
+     ================================================== */
   
-    max-width: 900px;
+  .hero-layout {
+    width:
+      min(
+        1100px,
+        88%
+      );
   
     display: grid;
   
     grid-template-columns:
-      repeat(3, 1fr);
+      minmax(
+        250px,
+        0.82fr
+      )
+      minmax(
+        390px,
+        1.18fr
+      );
   
-    gap: 26px 35px;
+    align-items: center;
+  
+    gap:
+      clamp(
+        50px,
+        6vw,
+        100px
+      );
   }
   
   
-  .skill-pill {
-    font-size: 23px;
+  /* ==================================================
+     HERO PHOTO
+     ================================================== */
   
-    padding: 20px 25px;
+  .hero-visual {
+    position: relative;
   
-    border-radius: 999px;
+    justify-self: end;
+  
+    width:
+      clamp(
+        250px,
+        23vw,
+        345px
+      );
+  }
+  
+  
+  .hero-photo-shadow {
+    position: absolute;
+  
+    inset:
+      20px
+      -17px
+      -17px
+      20px;
+  
+    border-radius: 22px;
+  
+    background:
+      var(--lavender);
+  
+    opacity: 0.55;
+  
+    transform:
+      rotate(3deg);
+  }
+  
+  
+  .hero-photo-frame {
+    position: relative;
+  
+    z-index: 2;
+  
+    overflow: hidden;
+  
+    aspect-ratio: 4 / 5;
+  
+    border:
+      1px solid
+      rgba(
+        43,
+        43,
+        43,
+        0.08
+      );
+  
+    border-radius: 22px;
+  
+    background: white;
+  
+    box-shadow:
+      0 22px 45px
+      rgba(
+        61,
+        54,
+        46,
+        0.14
+      );
+  
+    transform:
+      rotate(-1.5deg);
+  
+    transition:
+      transform
+        500ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        );
+  }
+  
+  
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  }
+  
+  
+  .hero-photo-star {
+    position: absolute;
+  
+    top: 13px;
+    right: 15px;
+  
+    display: grid;
+    place-items: center;
+  
+    width: 32px;
+    height: 32px;
+  
+    border-radius: 50%;
+  
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.82
+      );
+  
+    font-size: 14px;
+  }
+  
+  
+  /* ==================================================
+     LITTLE CREATIVE DEVELOPER NOTE
+     ================================================== */
+  
+  .hero-mini-note {
+    position: absolute;
+  
+    z-index: 4;
+  
+    left: -38px;
+    bottom: 30px;
+  
+    min-width: 116px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    border:
+      1px solid
+      rgba(
+        43,
+        43,
+        43,
+        0.08
+      );
+  
+    padding:
+      12px
+      14px;
+  
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.92
+      );
+  
+    box-shadow:
+      0 10px 24px
+      rgba(
+        53,
+        47,
+        42,
+        0.09
+      );
+  
+    transform:
+      rotate(4deg);
+  
+    font-size: 8px;
+    font-weight: 600;
+  
+    line-height: 1.5;
+  
+    letter-spacing: 0.09em;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  .hero-mini-note span:last-child {
+    margin-top: 5px;
+  
+    color: #b481c9;
+  }
+  
+  
+  /* ==================================================
+     HERO TEXT
+     ================================================== */
+  
+  .hero-copy {
+    max-width: 620px;
+  }
+  
+  
+  .hero-copy h1 {
+    margin:
+      0
+      0
+      20px;
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        52px,
+        5.7vw,
+        82px
+      );
+  
+    font-weight: 800;
+  
+    line-height: 0.88;
+  
+    letter-spacing: -0.045em;
+  
+    color: white;
+  }
+  
+  
+  .hero-copy h1 span {
+    display: block;
+  
+    margin-top: 8px;
+  
+    color: var(--ink);
+  }
+  
+  
+  .hero-sub {
+    max-width: 520px;
+  
+    margin:
+      0
+      0
+      27px;
+  
+    font-size:
+      clamp(
+        12px,
+        1.15vw,
+        16px
+      );
+  
+    line-height: 1.65;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.76
+      );
+  }
+  
+  
+  .hero-actions {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 23px;
+  }
+  
+  
+  /* ==================================================
+     02 — ABOUT
+     ================================================== */
+  
+  .home-about {
+    background: var(--cream);
+  }
+  
+  
+  .home-about::before {
+    content: "";
+  
+    position: absolute;
+  
+    inset:
+      44px
+      52px;
+  
+    z-index: -2;
+  
+    border-radius: 32px;
+  
+    background:
+      var(--gray);
+  }
+  
+  
+  .home-about::after {
+    content: "02";
+  
+    position: absolute;
+  
+    left: 68px;
+    bottom: -40px;
+  
+    z-index: -1;
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size: 185px;
+    font-weight: 800;
+  
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.06
+      );
+  }
+  
+  
+  .home-about
+  .home-slide-number {
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.48
+      );
+  
+    top: 65px;
+    left: 78px;
+  }
+  
+  
+  /* ==================================================
+     ABOUT LAYOUT
+     ================================================== */
+  
+  .about-layout {
+    width:
+      min(
+        1120px,
+        calc(
+          100% - 100px
+        )
+      );
+  
+    display: grid;
+  
+    grid-template-columns:
+      0.72fr
+      1.15fr
+      0.75fr;
+  
+    align-items: center;
+  
+    gap:
+      clamp(
+        35px,
+        5vw,
+        76px
+      );
+  
+    color: white;
+  }
+  
+  
+  /* ==================================================
+     ABOUT HEADING
+     ================================================== */
+  
+  .about-heading h2 {
+    margin: 0;
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        54px,
+        6vw,
+        86px
+      );
+  
+    line-height: 0.78;
+  
+    letter-spacing: -0.04em;
+  
+    color: white;
+  }
+  
+  
+  .about-heading h2 span {
+    display: block;
+  
+    color: var(--yellow);
+  }
+  
+  
+  .home-about
+  .home-kicker {
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.53
+      );
+  }
+  
+  
+  .about-line {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 10px;
+  
+    margin-top: 23px;
+  
+    color: var(--yellow);
+  }
+  
+  
+  .about-line div {
+    width: 90px;
+    height: 1px;
+  
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.35
+      );
+  }
+  
+  
+  /* ==================================================
+     ABOUT COPY
+     ================================================== */
+  
+  .about-copy {
+    max-width: 480px;
+  }
+  
+  
+  .about-copy p {
+    margin:
+      0
+      0
+      14px;
+  
+    font-size:
+      clamp(
+        11px,
+        1vw,
+        14px
+      );
+  
+    line-height: 1.7;
+  
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.75
+      );
+  }
+  
+  
+  .about-copy
+  .about-lead {
+    font-size:
+      clamp(
+        14px,
+        1.25vw,
+        18px
+      );
+  
+    font-weight: 500;
+  
+    line-height: 1.58;
+  
+    color: white;
+  }
+  
+  
+  /* ==================================================
+     ABOUT PROJECT LINK
+     ================================================== */
+  
+  .about-project-link {
+    display: inline-flex;
+  
+    align-items: center;
+  
+    gap: 9px;
+  
+    margin-top: 5px;
+  
+    border: none;
+  
+    border-bottom:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.42
+      );
+  
+    padding:
+      5px
+      0;
+  
+    background: transparent;
+  
+    font-family:
+      "Poppins",
+      sans-serif;
+  
+    font-size: 9px;
+    font-weight: 600;
+  
+    letter-spacing: 0.08em;
+  
+    color: white;
+  
+    cursor: pointer;
+  
+    transition:
+      gap 180ms ease;
+  }
+  
+  
+  .about-project-link:hover {
+    gap: 14px;
+  }
+  
+  
+  /* ==================================================
+     ABOUT POLAROID
+     ================================================== */
+  
+  .about-polaroid {
+    position: relative;
+  
+    justify-self: center;
+  
+    width:
+      clamp(
+        190px,
+        18vw,
+        260px
+      );
+  
+    padding:
+      10px
+      10px
+      34px;
+  
+    border-radius: 4px;
+  
+    background: white;
+  
+    box-shadow:
+      0 18px 35px
+      rgba(
+        24,
+        24,
+        24,
+        0.25
+      );
+  
+    transform:
+      rotate(3deg);
+  
+    transition:
+      transform
+        450ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        );
+  }
+  
+  
+  .about-polaroid img {
+    width: 100%;
+  
+    display: block;
+  
+    aspect-ratio: 1 / 0.78;
+  
+    object-fit: cover;
+  }
+  
+  
+  .about-tape {
+    position: absolute;
+  
+    top: -11px;
+    left: 50%;
+  
+    width: 70px;
+    height: 18px;
+  
+    background:
+      rgba(
+        210,
+        183,
+        131,
+        0.62
+      );
+  
+    transform:
+      translateX(-50%)
+      rotate(-3deg);
+  }
+  
+  
+  .about-polaroid-caption {
+    padding-top: 9px;
+  
+    font-family:
+      "Mrs Saint Delafield",
+      cursive;
+  
+    font-size: 20px;
+  
+    line-height: 0.85;
+  
+    text-align: center;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.78
+      );
+  }
+  
+  
+  .home-about
+  .home-next-section {
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.48
+      );
+  }
+  
+  
+  /* ==================================================
+     03 — SKILLS
+     ================================================== */
+  
+  .home-skills {
+    background: var(--cream);
+  }
+  
+  
+  .home-skills::before {
+    content: "SKILLS";
+  
+    position: absolute;
+  
+    left: 50%;
+    top: 50%;
+  
+    z-index: -1;
+  
+    transform:
+      translate(
+        -50%,
+        -50%
+      );
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        140px,
+        19vw,
+        270px
+      );
+  
+    font-weight: 800;
+  
+    letter-spacing: -0.08em;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.022
+      );
+  }
+  
+  
+  /* ==================================================
+     SKILLS CONTENT
+     ================================================== */
+  
+  .skills-content {
+    width:
+      min(
+        980px,
+        82%
+      );
   
     text-align: center;
   }
   
   
+  .skills-content h2 {
+    margin:
+      0
+      0
+      8px;
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        48px,
+        5.5vw,
+        75px
+      );
+  
+    line-height: 0.95;
+  
+    letter-spacing: -0.04em;
+  }
+  
+  
+  .skills-content h2 span {
+    color: #a879b7;
+  }
+  
+  
+  .skills-intro {
+    max-width: 480px;
+  
+    margin:
+      0
+      auto
+      30px;
+  
+    font-size: 11px;
+  
+    line-height: 1.65;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.58
+      );
+  }
+  
+  
   /* ==================================================
-     PAPER 4 — THANK YOU
+     SKILLS GRID
      ================================================== */
   
-  .thanks-box {
-    background: var(--gray);
+  .skills-grid {
+    width: 100%;
   
-    color: #fff;
+    display: grid;
   
-    min-height: calc(
-      100vh - var(--sticky-nav-height) - 14px
-    );
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+  
+    gap: 13px;
+  }
+  
+  
+  .skill-card {
+    min-height: 72px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+  
+    align-items: center;
+  
+    gap: 12px;
+  
+    border:
+      1.4px solid
+      rgba(
+        43,
+        43,
+        43,
+        0.45
+      );
+  
+    border-radius: 999px;
+  
+    padding:
+      11px
+      18px;
+  
+    background:
+      var(--yellow);
+  
+    transform:
+      translateY(14px);
+  
+    opacity: 0;
+  
+    transition:
+      transform
+        220ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        ),
+      box-shadow
+        220ms ease;
+  }
+  
+  
+  .home-skills.is-active
+  .skill-card {
+    animation:
+      skillIn
+      480ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      )
+      forwards;
+  
+    animation-delay:
+      calc(
+        var(--skill-index) *
+        45ms
+      );
+  }
+  
+  
+  .skill-card:hover {
+    transform:
+      translateY(-4px)
+      rotate(-1deg) !important;
+  
+    box-shadow:
+      0 10px 22px
+      rgba(
+        58,
+        50,
+        27,
+        0.1
+      );
+  }
+  
+  
+  .skill-number {
+    font-size: 8px;
+  
+    letter-spacing: 0.1em;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.42
+      );
+  }
+  
+  
+  .skill-name {
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size: 16px;
+    font-weight: 700;
+  
+    text-align: left;
+  }
+  
+  
+  .skill-star {
+    font-size: 11px;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.56
+      );
+  }
+  
+  
+  /* ==================================================
+     04 — THANK YOU
+     ================================================== */
+  
+  .home-thanks {
+    background: var(--cream);
+  }
+  
+  
+  .home-thanks::before {
+    content: "";
+  
+    position: absolute;
+  
+    width: 620px;
+    height: 620px;
+  
+    border-radius: 50%;
+  
+    background:
+      rgba(
+        231,
+        190,
+        248,
+        0.17
+      );
+  
+    transform:
+      scale(0.65);
+  
+    opacity: 0;
+  
+    transition:
+      transform
+        900ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        ),
+      opacity
+        600ms ease;
+  
+    z-index: -1;
+  }
+  
+  
+  .home-thanks.is-active::before {
+    transform:
+      scale(1);
+  
+    opacity: 1;
+  }
+  
+  
+  /* ==================================================
+     THANK YOU CONTENT
+     ================================================== */
+  
+  .thanks-content {
+    position: relative;
+  
+    z-index: 3;
+  
+    width:
+      min(
+        720px,
+        78%
+      );
+  
+    text-align: center;
+  }
+  
+  
+  .thanks-content h2 {
+    margin:
+      0
+      0
+      16px;
+  
+    font-family:
+      "Baloo 2",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        58px,
+        7vw,
+        94px
+      );
+  
+    line-height: 0.82;
+  
+    letter-spacing: -0.055em;
+  }
+  
+  
+  .thanks-content h2 span {
+    display: block;
+  
+    margin-top: 12px;
+  
+    color: #a879b7;
+  }
+  
+  
+  .thanks-content > p {
+    max-width: 480px;
+  
+    margin:
+      0
+      auto
+      26px;
+  
+    font-size: 12px;
+  
+    line-height: 1.7;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.63
+      );
+  }
+  
+  
+  .thanks-actions {
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+  
+    gap: 22px;
+  }
+  
+  
+  /* ==================================================
+     THANK YOU SOCIALS
+     ================================================== */
+  
+  .home-thanks
+  .social-row {
+    margin-top: 26px;
+  }
+  
+  
+  .home-thanks
+  .social-row a {
+    width: 38px;
+    height: 38px;
+  
+    border:
+      1px solid
+      rgba(
+        43,
+        43,
+        43,
+        0.08
+      );
+  
+    box-shadow:
+      0 6px 14px
+      rgba(
+        40,
+        36,
+        32,
+        0.07
+      );
+  }
+  
+  
+  /* ==================================================
+     BACK TO TOP
+     ================================================== */
+  
+  .home-back-top {
+    margin-top: 17px;
+  
+    border: none;
+  
+    background: transparent;
+  
+    font-family:
+      "Poppins",
+      sans-serif;
+  
+    font-size: 8px;
+    font-weight: 600;
+  
+    letter-spacing: 0.14em;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.4
+      );
+  
+    cursor: pointer;
+  
+    transition:
+      color 180ms ease;
+  }
+  
+  
+  .home-back-top:hover {
+    color: var(--ink);
+  }
+  
+  
+  /* ==================================================
+     THANK YOU DECORATIONS
+     ================================================== */
+  
+  .thanks-decoration {
+    position: absolute;
+  
+    z-index: 2;
+  
+    display: grid;
+    place-items: center;
+  
+    width: 44px;
+    height: 44px;
+  
+    border:
+      1px solid
+      rgba(
+        43,
+        43,
+        43,
+        0.15
+      );
+  
+    border-radius: 50%;
+  
+    font-size: 17px;
+  
+    transition:
+      transform
+        700ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        );
+  }
+  
+  
+  .thanks-decoration-one {
+    left: 14%;
+    top: 24%;
+  
+    background:
+      var(--yellow);
+  }
+  
+  
+  .thanks-decoration-two {
+    right: 15%;
+    bottom: 22%;
+  
+    background:
+      var(--blue);
+  }
+  
+  
+  .home-thanks.is-active
+  .thanks-decoration-one {
+    transform:
+      rotate(20deg)
+      translateY(-6px);
+  }
+  
+  
+  .home-thanks.is-active
+  .thanks-decoration-two {
+    transform:
+      rotate(-16deg)
+      translateY(6px);
+  }
+  
+  
+  /* ==================================================
+     SIDE SECTION NAVIGATION
+     ================================================== */
+  
+  .home-section-nav {
+    position: absolute;
+  
+    z-index: 50;
+  
+    top: 50%;
+    right: 20px;
   
     display: flex;
   
     flex-direction: column;
   
+    align-items: flex-end;
+  
+    gap: 9px;
+  
+    transform:
+      translateY(-50%);
+  }
+  
+  
+  .home-section-nav button {
+    display: flex;
+  
     align-items: center;
+    justify-content: flex-end;
   
-    justify-content: center;
+    gap: 7px;
   
-    text-align: center;
+    width: 88px;
   
-    padding: 90px 60px;
+    border: none;
   
-    /*
-      Slightly different width creates that imperfect
-      physical-paper stacking effect.
-    */
-    width: calc(100% - 28px);
+    padding: 3px 0;
   
-    margin-left: 14px;
-    margin-right: 14px;
+    background: transparent;
   
-    border-radius: 6px 6px 30px 30px;
+    font-family:
+      "Poppins",
+      sans-serif;
+  
+    color:
+      rgba(
+        43,
+        43,
+        43,
+        0.3
+      );
+  
+    cursor: pointer;
   }
   
   
-  .thanks-box h2 {
-    color: #fff;
+  .home-nav-number {
+    font-size: 7px;
   
-    font-size: 64px;
+    opacity: 0;
   
-    line-height: 1.1;
+    transform:
+      translateX(5px);
   
-    margin: 0 0 18px;
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease;
   }
   
   
-  .thanks-box p {
-    font-size: 30px;
+  .home-nav-dot {
+    width: 6px;
+    height: 6px;
   
-    margin: 0 0 35px;
+    flex-shrink: 0;
+  
+    border:
+      1px solid
+      rgba(
+        43,
+        43,
+        43,
+        0.35
+      );
+  
+    border-radius: 999px;
+  
+    transition:
+      width 220ms ease,
+      background 220ms ease;
   }
   
   
-  .thanks-box .pill-btn {
-    font-size: 26px;
+  .home-nav-label {
+    width: 0;
   
-    padding: 17px 75px;
+    overflow: hidden;
+  
+    opacity: 0;
+  
+    font-size: 7px;
+  
+    text-align: left;
+  
+    white-space: nowrap;
+  
+    transition:
+      width 220ms ease,
+      opacity 180ms ease;
   }
   
   
-  .thanks-box .social-row {
-    margin-top: 35px;
+  .home-section-nav
+  button:hover
+  .home-nav-number,
+  .home-section-nav
+  button.is-active
+  .home-nav-number {
+    opacity: 1;
+  
+    transform:
+      translateX(0);
   }
   
   
-  .thanks-box .social-row a {
-    width: 58px;
+  .home-section-nav
+  button:hover
+  .home-nav-label,
+  .home-section-nav
+  button.is-active
+  .home-nav-label {
+    width: 32px;
   
-    height: 58px;
+    opacity: 1;
+  }
   
-    font-size: 25px;
+  
+  .home-section-nav
+  button.is-active
+  .home-nav-dot {
+    width: 22px;
+  
+    background:
+      rgba(
+        43,
+        43,
+        43,
+        0.7
+      );
+  
+    border-color: transparent;
+  }
+  
+  
+  /* ==================================================
+     SECTION TRANSITIONS
+     ================================================== */
+  
+  .hero-visual,
+  .hero-copy,
+  .about-heading,
+  .about-copy,
+  .about-polaroid,
+  .skills-content,
+  .thanks-content {
+    opacity: 0;
+  
+    transform:
+      translateY(24px);
+  
+    transition:
+      opacity
+        650ms ease,
+      transform
+        650ms
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        );
+  }
+  
+  
+  .home-slide.is-active
+  .hero-visual,
+  .home-slide.is-active
+  .hero-copy,
+  .home-slide.is-active
+  .about-heading,
+  .home-slide.is-active
+  .about-copy,
+  .home-slide.is-active
+  .about-polaroid,
+  .home-slide.is-active
+  .skills-content,
+  .home-slide.is-active
+  .thanks-content {
+    opacity: 1;
+  
+    transform:
+      translateY(0);
+  }
+  
+  
+  .home-slide.is-active
+  .hero-copy,
+  .home-slide.is-active
+  .about-copy {
+    transition-delay: 80ms;
+  }
+  
+  
+  .home-slide.is-active
+  .about-polaroid {
+    transition-delay: 140ms;
+  }
+  
+  
+  /* ==================================================
+     SKILL ENTRANCE ANIMATION
+     ================================================== */
+  
+  @keyframes skillIn {
+    from {
+      opacity: 0;
+  
+      transform:
+        translateY(14px)
+        scale(0.96);
+    }
+  
+    to {
+      opacity: 1;
+  
+      transform:
+        translateY(0)
+        scale(1);
+    }
+  }
+  
+  
+  /* ==================================================
+     TABLET
+     ================================================== */
+  
+  @media (max-width: 1000px) {
+
+  
+    .home-slide {
+      padding:
+        45px
+        46px;
+    }
+  
+  
+    .hero-layout {
+      width: 90%;
+  
+      grid-template-columns:
+        0.8fr
+        1.2fr;
+  
+      gap: 42px;
+    }
+  
+  
+    .about-layout {
+      width:
+        calc(
+          100% - 70px
+        );
+  
+      grid-template-columns:
+        0.8fr
+        1.25fr;
+    }
+  
+  
+    .about-polaroid {
+      display: none;
+    }
+  
+  
+    .home-section-nav {
+      right: 12px;
+    }
+  
   }
   
   
@@ -832,162 +1919,288 @@
      ================================================== */
   
   @media (max-width: 640px) {
-  
-    /*
-      Disable the paper stacking on small/touch screens.
-      Normal scrolling is much nicer there.
-    */
-  
-    .paper-sheet {
-      position: relative;
-  
-      top: auto;
-  
-      min-height: auto;
-  
-      width: 100%;
-  
-      margin-left: 0;
-      margin-right: 0;
-  
-      box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.08);
-  
-      border-radius: 20px;
-  
-      margin-bottom: 24px;
+    .panel.panel-home {
+      height: calc(100dvh - 150px);
+      min-height: 650px;
+    
+      padding: 0;
+    
+      border-radius:
+        0
+        24px
+        24px
+        24px;
     }
   
   
-    /* HERO */
+    .home-page {
+      border-radius:
+        0
+        24px
+        24px
+        24px;
+    }
   
-    .hero {
-      min-height: auto;
   
-      flex-direction: column;
+    .home-slide {
+      padding:
+        55px
+        27px
+        46px;
+    }
   
-      gap: 28px;
   
-      padding: 45px 24px;
+    .home-slide-number {
+      top: 20px;
+      left: 22px;
+    }
+  
+  
+    /* =========================
+       MOBILE HERO
+       ========================= */
+  
+    .hero-layout {
+      width: 100%;
+  
+      grid-template-columns: 1fr;
+  
+      gap: 24px;
   
       text-align: center;
     }
   
   
-    .hero-photo-wrap {
-      flex: 0 0 auto;
+    .hero-visual {
+      justify-self: center;
   
-      width: 220px;
+      width:
+        min(
+          190px,
+          58vw
+        );
     }
   
   
-    .hero-photo {
-      width: 220px;
+    .hero-mini-note {
+      left: -18px;
+  
+      min-width: 90px;
+  
+      padding:
+        8px
+        9px;
+  
+      font-size: 6px;
     }
   
   
     .hero-copy {
-      flex: 1 1 auto;
-    }
-  
-  
-    .hero-copy .hi {
-      font-size: 40px;
-    }
-  
-  
-    .hero-copy h1 {
-      font-size: 32px;
-    }
-  
-  
-    .hero-sub {
-      font-size: 15px;
-  
       max-width: 100%;
     }
   
   
-    /* ABOUT */
+    .hero-copy h1 {
+      font-size:
+        clamp(
+          42px,
+          13vw,
+          60px
+        );
+    }
   
-    .about-box {
-      min-height: auto;
   
-      padding: 42px 24px;
+    .hero-sub {
+      margin-left: auto;
+      margin-right: auto;
   
-      flex-direction: column;
+      font-size: 11px;
+    }
   
-      gap: 28px;
+  
+    .hero-actions {
+      justify-content: center;
+    }
+  
+  
+    /* =========================
+       MOBILE ABOUT
+       ========================= */
+  
+    .home-about::before {
+      inset:
+        20px
+        16px;
+    }
+  
+  
+    .home-about
+    .home-slide-number {
+      top: 34px;
+      left: 30px;
+    }
+  
+  
+    .about-layout {
+      width:
+        calc(
+          100% - 16px
+        );
+  
+      grid-template-columns: 1fr;
+  
+      gap: 23px;
   
       text-align: center;
     }
   
   
-    .about-copy h2 {
-      font-size: 30px;
+    .about-heading h2 {
+      font-size: 52px;
+    }
+  
+  
+    .about-line {
+      justify-content: center;
+    }
+  
+  
+    .about-copy {
+      max-width: 100%;
+  
+      padding:
+        0
+        15px;
     }
   
   
     .about-copy p {
-      font-size: 14px;
+      font-size: 10px;
     }
   
   
-    .polaroid {
-      width: 190px;
-  
-      margin: 0 auto;
+    .about-copy
+    .about-lead {
+      font-size: 13px;
     }
   
   
-    /* SKILLS */
+    /* =========================
+       MOBILE SKILLS
+       ========================= */
   
-    .skills-section {
-      min-height: auto;
-  
-      padding: 50px 22px;
+    .skills-content {
+      width: 100%;
     }
   
   
-    .skills-section h2 {
-      font-size: 30px;
+    .skills-content h2 {
+      font-size: 48px;
+    }
   
-      margin-bottom: 30px;
+  
+    .skills-intro {
+      margin-bottom: 20px;
     }
   
   
     .skills-grid {
       grid-template-columns:
-        repeat(3, minmax(80px, 1fr));
+        repeat(
+          2,
+          1fr
+        );
   
-      max-width: 100%;
-  
-      gap: 10px;
+      gap: 9px;
     }
   
   
-    .skill-pill {
-      font-size: 12px;
+    .skill-card {
+      min-height: 54px;
   
-      padding: 10px 6px;
+      padding:
+        9px
+        12px;
     }
   
   
-    /* THANK YOU */
-  
-    .thanks-box {
-      min-height: auto;
-  
-      padding: 50px 22px;
+    .skill-name {
+      font-size: 13px;
     }
   
   
-    .thanks-box h2 {
-      font-size: 28px;
+    /* =========================
+       MOBILE THANKS
+       ========================= */
+  
+    .thanks-content {
+      width: 100%;
     }
   
   
-    .thanks-box p {
-      font-size: 14px;
+    .thanks-content h2 {
+      font-size:
+        clamp(
+          52px,
+          15vw,
+          70px
+        );
     }
+  
+  
+    .thanks-actions {
+      flex-direction: column;
+  
+      gap: 4px;
+    }
+  
+  
+    .thanks-decoration-one {
+      left: 7%;
+    }
+  
+  
+    .thanks-decoration-two {
+      right: 8%;
+    }
+  
+  
+    /* hide side navigation on mobile */
+  
+    .home-section-nav {
+      display: none;
+    }
+  
+  }
+  
+  
+  /* ==================================================
+     REDUCED MOTION
+     ================================================== */
+  
+  @media (
+    prefers-reduced-motion:
+    reduce
+  ) {
+  
+    .home-scroll {
+      scroll-behavior: auto;
+    }
+  
+  
+    .hero-visual,
+    .hero-copy,
+    .about-heading,
+    .about-copy,
+    .about-polaroid,
+    .skills-content,
+    .thanks-content,
+    .skill-card,
+    .thanks-decoration,
+    .home-thanks::before {
+      animation: none;
+  
+      transition: none;
+    }
+  
   }

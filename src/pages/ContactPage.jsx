@@ -14,7 +14,7 @@ export default function ContactPage() {
 
   return (
     <div className="panel-inner contact-page">
-      <h1>Let's stay in touch!</h1>
+      <h1>Let's Work Together!</h1>
       <form className="contact-form" onSubmit={handleSubmit}>
         <p className="contact-form-label">Contact Us</p>
         <input

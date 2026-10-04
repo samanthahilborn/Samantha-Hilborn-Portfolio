@@ -121,7 +121,7 @@ body {
   position: relative;
   z-index: 2;
   box-shadow: 0 20px 50px rgba(20, 20, 40, 0.18);
-  transition: background 0.25s ease;
+  /* transition: background 0.25s ease; */
 }
 
 
