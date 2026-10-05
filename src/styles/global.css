@@ -36,15 +36,14 @@ body {
   overflow-x: hidden;
 }
 
+
 .sky-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/sky.jpg");
+  background: #F2DCDB;
+  /* background: #4B2F24; */
+  /* background: #FFE4ED; */
   z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    /* background-attachment: fixed; */
 }
 
 .page-frame {

@@ -2,7 +2,7 @@
    PROJECTS PAGE
    ========================= */
 
-  .projects-page {
+   .projects-page {
     position: relative;
     min-height: 75vh;
     padding-top: 42px;
@@ -90,301 +90,331 @@
   
   /* =========================
      PROJECT CARDS
+     modern editorial redesign
      ========================= */
-  
+
   .project-carousel-card {
     position: absolute;
-    
+
     top: 48%;
     left: 50%;
-    
+
     width: 365px;
-    height: 495px;
-  
+    height: 500px;
+
     display: flex;
     flex-direction: column;
-  
+
     overflow: hidden;
-  
-    border:
-      1.5px solid
-      rgba(74, 62, 91, 0.22);
-  
-    border-radius: 22px;
-  
-    background: #f0c8fb;
-  
+
+    border: 1px solid rgba(42, 38, 35, 0.14);
+    border-radius: 18px;
+
+    background: var(--card-bg, var(--cream, #FEF8F0));
+
     box-shadow:
-      0 24px 50px
-      rgba(70, 60, 45, 0.15);
-  
+      0 18px 42px
+      rgba(70, 60, 45, 0.13);
+
     transform-origin: 50% 105%;
-  
+
     transition:
-      transform
-        520ms
-        cubic-bezier(0.22, 1, 0.36, 1),
+      transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
       opacity 350ms ease,
       box-shadow 350ms ease,
       filter 350ms ease;
-  
+
     will-change: transform;
+
+    --card-bg: var(--cream, #FEF8F0);
+    --card-text: #2d2a27;
+    --card-muted: rgba(45, 42, 39, 0.70);
+    --card-line: rgba(45, 42, 39, 0.16);
   }
-  
+
   .project-carousel-stage.is-dragging
   .project-carousel-card {
     transition: none;
   }
-  
+
   .project-carousel-card:not(.is-active) {
-    filter: saturate(0.85);
+    filter: none;
   }
-  
+
   .project-carousel-card.is-active {
     box-shadow:
-      0 30px 70px
-      rgba(70, 60, 45, 0.24);
+      0 26px 62px
+      rgba(70, 60, 45, 0.19);
   }
-  
-  
-  /* DIFFERENT PASTEL CARD COLOURS */
-  
+
+  .project-carousel-card:hover {
+    box-shadow:
+      0 24px 54px
+      rgba(70, 60, 45, 0.17);
+  }
+
+
+  /* SITE PALETTE — ONE CLEAN COLOUR PER CARD */
+
+  .project-carousel-card:nth-child(1) {
+    --card-bg: var(--cream, #FEF8F0);
+    --card-text: #302b27;
+    --card-muted: rgba(48, 43, 39, 0.70);
+    --card-line: rgba(48, 43, 39, 0.16);
+  }
+
   .project-carousel-card:nth-child(2) {
-    background: #f7e3ad;
+    --card-bg: var(--blue, #8CA7F4);
+    --card-text: #23304f;
+    --card-muted: rgba(35, 48, 79, 0.72);
+    --card-line: rgba(35, 48, 79, 0.18);
   }
-  
+
   .project-carousel-card:nth-child(3) {
-    background: #cbd9f4;
+    --card-bg: var(--lavender, #E7BEF8);
+    --card-text: #493252;
+    --card-muted: rgba(73, 50, 82, 0.70);
+    --card-line: rgba(73, 50, 82, 0.17);
   }
-  
+
   .project-carousel-card:nth-child(4) {
-    background: #d9efc4;
+    --card-bg: var(--olive, #EDE986);
+    --card-text: #49471f;
+    --card-muted: rgba(73, 71, 31, 0.72);
+    --card-line: rgba(73, 71, 31, 0.18);
   }
-  
+
   .project-carousel-card:nth-child(5) {
-    background: #e7c7f0;
+    --card-bg: var(--yellow, #FFFF84);
+    --card-text: #403d14;
+    --card-muted: rgba(64, 61, 20, 0.72);
+    --card-line: rgba(64, 61, 20, 0.18);
   }
-  
+
   .project-carousel-card:nth-child(6) {
-    background: #ffd4db;
+    --card-bg: var(--blue, #8CA7F4);
+    --card-text: #23304f;
+    --card-muted: rgba(35, 48, 79, 0.72);
+    --card-line: rgba(35, 48, 79, 0.18);
   }
-  
-  
+
+
   /* =========================
-     CARD HEADER
+     CARD HEADER — sits over image
      ========================= */
-  
+
   .project-card-topline {
-    min-height: 44px;
-  
-    display: flex;
-    justify-content: space-between;
-  
-    gap: 14px;
-  
-    padding: 12px 15px 9px;
-  
-    font-size: 9px;
-    font-weight: 600;
-  
-    letter-spacing: 0.06em;
-  
-    color: #57485f;
+    display: none;
   }
-  
-  .project-card-topline span:last-child {
-    max-width: 180px;
-  
-    text-align: right;
-  }
-  
-  
+
+
   /* =========================
-     CARD VISUAL
+     CARD VISUAL — sky.jpg
      ========================= */
-  
+
   .project-card-visual {
     position: relative;
-    
-    height: 165px;
-    flex: 0 0 165px;
-  
-    display: grid;
-    place-items: center;
-  
+
+    height: 238px;
+    flex: 0 0 238px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
     overflow: hidden;
-  
-    background:
-      radial-gradient(
-        circle at 20% 15%,
-        rgba(255, 255, 255, 0.55),
-        transparent 28%
-      ),
-      linear-gradient(
-        150deg,
-        #7896b7,
-        #526a87
-      );
-  
-    color: #f8f5ff;
+
+    padding: 18px;
+
+    border: none;
+    border-bottom: 1px solid rgba(42, 38, 35, 0.12);
+
+    background-image: url("../assets/sky.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+
+    color: #2d2a27;
   }
-  
-  .project-card-spark {
-    position: absolute;
-  
-    left: 18px;
-    top: 14px;
-  
-    font-size: 18px;
+
+  .project-card-visual::before {
+    display: none;
   }
-  
+
+  .project-card-spark,
   .project-card-number {
-    position: absolute;
-  
-    right: 14px;
-    bottom: -16px;
-  
-    font-family:
-      "Baloo 2",
-      sans-serif;
-  
-    font-size: 80px;
-    font-weight: 800;
-  
-    line-height: 1;
-  
-    color:
-      rgba(255, 255, 255, 0.12);
+    display: none;
   }
-  
+
   .project-card-visual p {
-    position: relative;
-  
-    z-index: 1;
-  
-    margin: 0;
-  
-    font-family:
-      "Mrs Saint Delafield",
-      cursive;
-  
-    font-size: 38px;
-  
-    line-height: 1;
+    display: none;
   }
-  
-  
+
+
   /* =========================
      CARD CONTENT
      ========================= */
-  
+
   .project-card-copy {
     min-height: 0;
-  
+
     flex: 1;
-  
+
     display: flex;
     flex-direction: column;
-  
-    padding: 16px 17px 17px;
-  
-    color: #51385a;
+
+    padding: 18px 18px 16px;
+
+    background: var(--card-bg);
+    color: var(--card-text);
   }
-  
+
   .project-card-copy h2 {
-    margin: 0 0 7px;
-  
+    margin: 0 0 8px;
+
     font-family:
       "Baloo 2",
       sans-serif;
-  
-    font-size: 18px;
-  
-    line-height: 1.1;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.02;
+
+    color: var(--card-text);
   }
-  
+
   .project-card-copy > p {
-    margin: 0 0 13px;
-  
+    margin: 0 0 15px;
+
     font-size: 11px;
-  
-    line-height: 1.52;
+    line-height: 1.5;
+
+    color: var(--card-muted);
   }
-  
-  
+
+
   /* =========================
-     TECHNOLOGY PILLS
+     TECHNOLOGY LABELS
      ========================= */
-  
+
   .project-stack {
     display: flex;
-  
+
     flex-wrap: wrap;
-  
-    gap: 5px;
-  
+
+    gap: 5px 12px;
+
     margin-top: auto;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
   }
-  
-  .project-stack span,
+
+  .project-stack span {
+    position: relative;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: transparent;
+
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--card-text);
+  }
+
+  .project-stack span:not(:last-child)::after {
+    content: "•";
+
+    position: absolute;
+
+    right: -8px;
+
+    color: var(--card-muted);
+  }
+
+  /* Keep the modal technology pills unchanged. */
   .project-modal-stack span {
     border:
       1px solid
       rgba(81, 56, 90, 0.42);
-  
+
     border-radius: 999px;
-  
+
     padding: 4px 8px;
-  
+
     font-size: 9px;
-  
+
     line-height: 1;
   }
-  
-  
+
+
   /* =========================
      SEE PROJECT BUTTON
      ========================= */
-  
+
   .project-details-btn {
     width: 100%;
-  
+
+    min-height: 36px;
+
     display: flex;
-  
+
     align-items: center;
     justify-content: space-between;
-  
+
     border: none;
-  
-    border-radius: 999px;
-  
-    padding: 11px 14px;
-  
-    background:
-      rgba(255, 255, 255, 0.75);
-  
+    border-top: 1px solid var(--card-line);
+
+    border-radius: 0;
+
+    padding: 11px 0 0;
+
+    background: transparent;
+
     font: inherit;
-  
-    font-size: 11px;
-    font-weight: 600;
-  
-    color: #4e3c55;
-  
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    color: var(--card-text);
+
     cursor: pointer;
-  
+
     transition:
-      transform 180ms ease,
-      background 180ms ease;
+      opacity 180ms ease,
+      color 180ms ease;
   }
-  
+
   .project-details-btn:hover {
-    transform: translateY(-2px);
-  
-    background: white;
+    transform: none;
+
+    background: transparent;
+
+    opacity: 0.68;
   }
-  
-  
+
+  .project-details-btn span {
+    font-size: 15px;
+
+    transition: transform 180ms ease;
+  }
+
+  .project-details-btn:hover span {
+    transform: translate(3px, -3px);
+  }
+
+
   /* =========================
      CAROUSEL CONTROLS
      ========================= */
@@ -792,33 +822,47 @@
   
       margin-top: 6px;
     }
-  
+
     .project-carousel-card {
-      width: min(78vw, 290px);
-  
-      height: 395px;
-  
+      width: min(80vw, 300px);
+
+      height: 420px;
+
       top: 47%;
-  
-      border-radius: 20px;
+
+      border-radius: 16px;
     }
-  
+
+
     .project-card-visual {
-      height: 125px;
-  
-      flex-basis: 125px;
+      height: 180px;
+
+      flex-basis: 180px;
+
+      padding: 15px;
     }
-  
-    .project-card-visual p {
-      font-size: 34px;
+
+
+    .project-card-copy {
+      padding: 15px 15px 14px;
     }
-  
+
     .project-card-copy h2 {
-      font-size: 17px;
+      font-size: 20px;
     }
-  
+
     .project-card-copy > p {
-      font-size: 10.5px;
+      font-size: 10px;
+    }
+
+    .project-stack span {
+      font-size: 7.5px;
+    }
+
+    .project-details-btn {
+      min-height: 32px;
+
+      font-size: 9px;
     }
   
     .project-modal-backdrop {
@@ -861,3 +905,4 @@
       animation: none;
     }
   }
+

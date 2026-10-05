@@ -1011,3 +1011,207 @@ min-height: 650px;
       transition: none;
     }
   }
+
+/* ==================================================
+   EXPERIENCE PAGE — DEEP RED THEME
+   ================================================== */
+
+   .experience-page {
+    --exp-red: #AB1817;
+    --exp-red-dark: #861211;
+    --exp-red-deep: #64100F;
+    --exp-red-soft: rgba(171, 24, 23, 0.14);
+  
+    color: var(--exp-red);
+  }
+  
+  
+  /* --------------------------
+     HEADER
+     -------------------------- */
+  
+  .experience-eyebrow {
+    color: var(--exp-red);
+  }
+  
+  .experience-page h1 {
+    color: var(--exp-red);
+  }
+  
+  .experience-header-right p {
+    color: var(--exp-red);
+  }
+  
+  .experience-header-right span {
+    color: var(--exp-red);
+  }
+  
+  
+  /* --------------------------
+     TIMELINE LINE
+     -------------------------- */
+  
+  .experience-line {
+    background: rgba(171, 24, 23, 0.35);
+  }
+  
+  
+  /* --------------------------
+     EXPERIENCE CARDS
+     -------------------------- */
+  
+  .experience-card {
+    background: rgba(171, 24, 23, 0.08);
+  
+    border-color: rgba(171, 24, 23, 0.28);
+  
+    box-shadow:
+      0 13px 32px
+      rgba(100, 16, 15, 0.10);
+  
+    color: var(--exp-red);
+  }
+  
+  
+  /* CARD HOVER */
+  
+  .experience-stop:not(.is-active)
+  .experience-card:hover {
+    background: rgba(171, 24, 23, 0.13);
+  
+    border-color: rgba(171, 24, 23, 0.5);
+  
+    box-shadow:
+      0 17px 38px
+      rgba(100, 16, 15, 0.15);
+  }
+  
+  
+  /* ACTIVE CARD */
+  
+  .experience-stop.is-active
+  .experience-card {
+    background: rgba(171, 24, 23, 0.16);
+  
+    border-color: var(--exp-red);
+  
+    box-shadow:
+      0 24px 55px
+      rgba(100, 16, 15, 0.18);
+  }
+  
+  
+  /* --------------------------
+     CARD TEXT
+     -------------------------- */
+  
+  .experience-number {
+    color: var(--exp-red);
+  }
+  
+  .experience-year {
+    color: var(--exp-red);
+  }
+  
+  .experience-card h2 {
+    color: var(--exp-red);
+  }
+  
+  .experience-expanded p {
+    color: var(--exp-red-deep);
+  }
+  
+  .experience-extra-detail {
+    color: var(--exp-red) !important;
+  }
+  
+  
+  /* --------------------------
+     PLUS / MINUS BUTTON
+     -------------------------- */
+  
+  .experience-expand-icon {
+    border-color: rgba(171, 24, 23, 0.35);
+  
+    color: var(--exp-red);
+  }
+  
+  .experience-stop.is-active
+  .experience-expand-icon {
+    background: rgba(171, 24, 23, 0.12);
+  }
+  
+  
+  /* --------------------------
+     EXPANDED CARD DETAILS
+     -------------------------- */
+  
+  .experience-divider {
+    background: rgba(171, 24, 23, 0.25);
+  }
+  
+  .experience-skills span {
+    border-color: rgba(171, 24, 23, 0.35);
+  
+    background: rgba(171, 24, 23, 0.08);
+  
+    color: var(--exp-red);
+  }
+  
+  .experience-collapse-text {
+    color: var(--exp-red);
+  }
+  
+  
+  /* --------------------------
+     CONNECTORS
+     -------------------------- */
+  
+  .experience-connector {
+    border-left-color: rgba(171, 24, 23, 0.4);
+  }
+  
+  
+  /* --------------------------
+     TIMELINE DOTS
+     -------------------------- */
+  
+  .experience-dot {
+    border-color: var(--exp-red);
+  
+    background: #AB1817;
+  }
+  
+  .experience-dot span {
+    background: var(--exp-red-deep);
+  }
+  
+  .experience-stop:hover
+  .experience-dot {
+    box-shadow:
+      0 0 0 8px
+      rgba(171, 24, 23, 0.13);
+  }
+  
+  .experience-stop.is-active
+  .experience-dot {
+    background: var(--exp-red);
+  
+    box-shadow:
+      0 0 0 9px
+      rgba(171, 24, 23, 0.18);
+  }
+  
+  .experience-stop.is-active
+  .experience-dot span {
+    background: #ffffff;
+  }
+  
+  
+  /* --------------------------
+     BOTTOM TIMELINE LABEL
+     -------------------------- */
+  
+  .experience-timeline-footer {
+    color: var(--exp-red);
+  }

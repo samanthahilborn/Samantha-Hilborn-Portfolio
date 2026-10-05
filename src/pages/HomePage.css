@@ -2204,3 +2204,14 @@
     }
   
   }
+
+  /* ==================================================
+   HOME FOLDER BLUE
+   ================================================== */
+
+.home-slide,
+.home-about,
+.home-skills,
+.home-thanks {
+  background: #FEFAD8;
+}

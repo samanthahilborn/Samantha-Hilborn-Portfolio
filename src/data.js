@@ -1,14 +1,16 @@
+const FOLDER_COL = "#FEFAD8";
+
 export const TABS = [
-  { id: "home", label: "Home", color: "var(--cream)", text: "#2b2b2b" },
-  { id: "experience", label: "Experience", color: "var(--blue)", text: "#fff" },
-  { id: "projects", label: "Projects", color: "var(--olive)", text: "#5c5a2e" },
-  { id: "contact", label: "Contact Me", color: "var(--lavender)", text: "#fff" },
+  { id: "home", label: "Home", color: FOLDER_COL, text: "#AB1817" },
+  { id: "experience", label: "Experience", color: FOLDER_COL, text: "#AB1817" },
+  { id: "projects", label: "Projects", color: FOLDER_COL, text: "#AB1817" },
+  { id: "contact", label: "Contact Me", color: FOLDER_COL, text: "#AB1817" },
 ];
 
 export const SKILLS = [
   "React", "TypeScript", "Figma",
   "Node.js", "Python", "UI / UX",
-  "Next.js", "Tailwind", "Git",
+  "Next.js", "Tailwind", "Git", "hi", "idk"
 ];
 
 export const EXPERIENCE = [
